@@ -24,6 +24,7 @@
     <ProjectGuid>{bc5f8407-fd1a-451e-914f-00105236822d}</ProjectGuid>
     <RootNamespace>LeetCodeProblems</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>NonDecreasingArray</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

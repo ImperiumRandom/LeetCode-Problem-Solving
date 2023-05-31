@@ -1,20 +1,63 @@
-// LeetCodeProblems.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <vector>
+
+
+class Solution {
+public:
+    bool checkPossibility(std::vector<int>& nums) {
+
+        return false;
+
+    }
+};
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    // Variables and Containers 
+   
+    int userInput;
+    std::vector<int>testNums;
+
+
+    // main code
+    
+    std::cout << "Please enter a integer greater than 0! Enter 0 to finsih."; // prompt
+   
+    while (true) {
+
+        // input validation
+        while (std::cin >> userInput) {
+
+            std::cout << "Please enter an integer!";
+            system("pause");
+
+        }
+
+        // checks if user wants to finish entering integers
+        if (userInput == 0) {
+
+            break;
+
+        }
+
+        else {
+
+            continue;
+
+        }
+
+    }
+
+    system("pause");
+
+    // random temporary object for checking possibility
+    Solution object;
+    
+    std::cout << object.checkPossibility(testNums);
+
+
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
