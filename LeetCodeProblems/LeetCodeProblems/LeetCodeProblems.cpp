@@ -3,12 +3,19 @@
 
 
 class Solution {
+
 public:
+    
     bool checkPossibility(std::vector<int>& nums) {
+
+
+
+
 
         return false;
 
     }
+
 };
 
 
@@ -23,17 +30,21 @@ int main()
 
     // main code
     
-    std::cout << "Please enter a integer greater than 0! Enter 0 to finsih."; // prompt
+    std::cout << "Please enter a integer greater than 0! Enter 0 to finsih. \n"; // prompt
    
     while (true) {
 
         // input validation
-        while (std::cin >> userInput) {
+        while (!(std::cin >> userInput)) {
 
-            std::cout << "Please enter an integer!";
+            std::cout << "Please enter an integer! \n";
             system("pause");
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         }
+
+        std::cout << "You entered: " << userInput;
+        std::cout << std::endl;
 
         // checks if user wants to finish entering integers
         if (userInput == 0) {
@@ -44,6 +55,7 @@ int main()
 
         else {
 
+            testNums.push_back(userInput);
             continue;
 
         }
