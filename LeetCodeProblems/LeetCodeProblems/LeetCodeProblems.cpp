@@ -8,11 +8,31 @@ public:
     
     bool checkPossibility(std::vector<int>& nums) {
 
+        std::vector<int>::iterator checkNums;
+        for (checkNums = nums.begin(); checkNums != nums.end(); checkNums++) {
+
+            std::cout << "worked" << *checkNums;
+
+            // returns false because array is decreasing
+            
+            // need to add if statement to check last element
+            if (*checkNums > *(checkNums + 1)) {
+
+                return false;
+
+            }
+
+            else {
+
+                continue;
+
+            }
 
 
+        }
 
-
-        return false;
+        // returns true because aray is non decreasing
+        return true;
 
     }
 
@@ -34,11 +54,12 @@ int main()
    
     while (true) {
 
-        // input validation
+        // input validation for integer
         while (!(std::cin >> userInput)) {
 
             std::cout << "Please enter an integer! \n";
             system("pause");
+            std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         }
@@ -66,10 +87,12 @@ int main()
 
     // random temporary object for checking possibility
     Solution object;
-    
-    std::cout << object.checkPossibility(testNums);
 
 
+    std::cout << "Is your array non decreasing?:\n";
+
+    // displays result with bool alpha (this makes result display as a string)
+    std::cout << std::boolalpha << object.checkPossibility(testNums);
 
 }
 
