@@ -8,6 +8,9 @@ public:
     
     bool checkPossibility(std::vector<int>& nums) {
 
+        bool modifiableElement = false;
+
+
         std::vector<int>::iterator checkNums;
         for (checkNums = nums.begin(); checkNums != nums.end(); checkNums++) {
 
@@ -15,23 +18,29 @@ public:
 
             // returns false because array is decreasing
             
-            // need to add if statement to check last element
-            if (*checkNums > *(checkNums + 1)) {
+            // this if statement only executes if num is not on its last element
+            if (!((checkNums != nums.end()) && (checkNums + 1 == nums.end()))){
 
-                return false;
+
+                 if (*checkNums > *(checkNums + 1)) {
+
+                    return false;
+
+                 }
+
+                 
+                 else {
+
+                    continue;
+
+                 }
+
 
             }
-
-            else {
-
-                continue;
-
-            }
-
-
+            
         }
 
-        // returns true because aray is non decreasing
+        // returns true because array is non decreasing
         return true;
 
     }
