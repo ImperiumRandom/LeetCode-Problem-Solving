@@ -2,29 +2,37 @@
 #include <vector>
 
 
-class Solution {
+class solution {
 
 public:
     
-    bool checkPossibility(std::vector<int>& nums) {
+    static bool checkPossibility(std::vector<int>& nums) {
 
+        // will be used to check if a modifiable element has already been found
         bool modifiableElement = false;
 
 
         std::vector<int>::iterator checkNums;
         for (checkNums = nums.begin(); checkNums != nums.end(); checkNums++) {
-
-            std::cout << "worked" << *checkNums;
-
-            // returns false because array is decreasing
-            
+           
             // this if statement only executes if num is not on its last element
-            if (!((checkNums != nums.end()) && (checkNums + 1 == nums.end()))){
+            if (!(checkNums + 1 == nums.end())){
 
 
                  if (*checkNums > *(checkNums + 1)) {
 
-                    return false;
+                     if (modifiableElement = true) {
+
+                         // returns false because array is decreasing   
+                         return false;
+
+                     }
+
+                     else {
+
+                         modifiableElement = true;
+
+                     }
 
                  }
 
@@ -55,6 +63,7 @@ int main()
    
     int userInput;
     std::vector<int>testNums;
+    bool isNonDecreasing = false;
 
 
     // main code
@@ -94,14 +103,25 @@ int main()
 
     system("pause");
 
-    // random temporary object for checking possibility
-    Solution object;
-
-
     std::cout << "Is your array non decreasing?:\n";
 
-    // displays result with bool alpha (this makes result display as a string)
-    std::cout << std::boolalpha << object.checkPossibility(testNums);
+    // displays results
+    isNonDecreasing = solution::checkPossibility(testNums);
+    std::cout << std::boolalpha << isNonDecreasing;
+
+    if (isNonDecreasing) {
+
+        std::cout << ", there is either no or just one modifiable element.";
+
+    }
+
+    else {
+
+        std::cout << ", there more than one modifiable element.";
+
+    }
+
+    system("pause");
 
 }
 
