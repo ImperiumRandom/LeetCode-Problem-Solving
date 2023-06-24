@@ -1,2 +1,3 @@
 ﻿  LeetCodeProblems.cpp
+D:\VsCodeProjects\Leet Code Solving Problems\LeetCodeProblems\LeetCodeProblems\LeetCodeProblems.cpp(30,25): warning C4804: '>': unsafe use of type 'bool' in operation
   LeetCodeProblems.vcxproj -> D:\VsCodeProjects\Leet Code Solving Problems\LeetCodeProblems\x64\Debug\NonDecreasingArray.exe

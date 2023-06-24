@@ -2,6 +2,9 @@
 #include <vector>
 
 
+// make sure element before found element is compared to next element
+
+
 class solution {
 
 public:
@@ -10,13 +13,38 @@ public:
 
         // will be used to check if a modifiable element has already been found
         bool modifiableElement = false;
-
+        bool comparePreviousElement = false; // this will compare the element before our modifiable element
+        int previousElement;
 
         std::vector<int>::iterator checkNums;
         for (checkNums = nums.begin(); checkNums != nums.end(); checkNums++) {
            
             // this if statement only executes if num is not on its last element
             if (!(checkNums + 1 == nums.end())){
+
+                if (comparePreviousElement) {
+
+                    std::cout << "executed compare previous element";
+                    system("pause");
+
+                    if (comparePreviousElement > *checkNums) {
+
+                        
+                        return false;
+
+                    }
+
+                    else {
+
+                        std::cout << "set compare previous element to false";
+                        system("pause");
+                        comparePreviousElement = false;
+
+                    }
+
+
+                }
+
 
 
                  if (*checkNums > *(checkNums + 1)) {
@@ -31,7 +59,8 @@ public:
                      else {
 
                          modifiableElement = true;
-
+                         comparePreviousElement = true;
+                         previousElement = *checkNums;
                      }
 
                  }
