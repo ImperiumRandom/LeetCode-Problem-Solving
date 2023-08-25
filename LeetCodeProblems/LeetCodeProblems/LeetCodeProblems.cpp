@@ -8,46 +8,56 @@
 class solution {
 
 public:
-    
-    static bool checkPossibility(std::vector<int>& nums) {
+
+    static bool checkPossibility(std::vector<int> nums) {
 
         // will be used to check if a modifiable element has already been found
         bool modifiableElement = false;
+        int currentIndex = 0;
+
 
         std::vector<int>::iterator checkNums;
         for (checkNums = nums.begin(); checkNums != nums.end(); checkNums++) {
-           
+
             // this if statement only executes if num is not on its last element
-            if (!(checkNums + 1 == nums.end())){
+            if (!(checkNums + 1 == nums.end())) {
 
 
+
+                // checks for decrease each time
                 if (*checkNums > *(checkNums + 1)) {
 
-                    if (modifiableElement = true) {
 
-                         // returns false because array is decreasing now  
-                         return false;
+                    if (modifiableElement == true) {
+
+                        // returns false because array is decreasing now  
+                        return false;
 
                     }
 
-                    else {
+                    else if (modifiableElement == false) {
 
-                         modifiableElement = true;
-                         continue;
+                        nums[currentIndex] = *(checkNums--);
+                        checkNums = nums.begin();
+                        modifiableElement = true;
+                        currentIndex++;
+                        continue;
+
                     }
 
-                 }
+                }
 
-                 
+
                 else {
 
-                   continue;
+                    currentIndex++;
+                    continue;
 
                 }
 
 
             }
-            
+
         }
 
         // returns true because array is non decreasing
