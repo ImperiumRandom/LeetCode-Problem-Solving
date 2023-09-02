@@ -4,6 +4,10 @@
 #include <iostream>
 
 
+// 85 ms runtime - beats 93.82% of users with C++
+
+// 57.30 mb memory - beats 87.19% of users with C++
+
 
 
 class Solution {
@@ -13,25 +17,16 @@ public:
         // sorts array in order
         std::sort(nums.begin(), nums.end());
 
-        for (int i = 0; i < nums.size(); i++) {
-            
-            // stops program from checking a non existant index
-            if (nums[i] != (nums.size() - 2)) {
+        for (int i = 0; i < nums.size() - 1; i++) {
 
-                // catches duplicates
-                if (nums[i] == nums[i++]) {
+
+             // catches duplicates
+             if (nums[i] == nums[i + 1]) {
                    
-                    return true;
+                 return true;
 
-                }
+             }
 
-            }
-
-            else {
-
-                continue;
-
-            }
 
         }
 
