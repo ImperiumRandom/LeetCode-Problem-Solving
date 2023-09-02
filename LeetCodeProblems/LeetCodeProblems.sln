@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NonDecreasingArray", "LeetC
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Contains Duplicate (Arrays and Hashing)", "Contains Duplicate (Arrays and Hashing)\Contains Duplicate (Arrays and Hashing).vcxproj", "{764B008D-59B1-411C-88F5-AE397305A25B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Valid Anagram (Arrays and Hashing)", "Valid Anagram (Arrays and Hashing)\Valid Anagram (Arrays and Hashing).vcxproj", "{923F5EE8-E007-454D-9DAA-D2A691EB92FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{764B008D-59B1-411C-88F5-AE397305A25B}.Release|x64.Build.0 = Release|x64
 		{764B008D-59B1-411C-88F5-AE397305A25B}.Release|x86.ActiveCfg = Release|Win32
 		{764B008D-59B1-411C-88F5-AE397305A25B}.Release|x86.Build.0 = Release|Win32
+		{923F5EE8-E007-454D-9DAA-D2A691EB92FE}.Debug|x64.ActiveCfg = Debug|x64
+		{923F5EE8-E007-454D-9DAA-D2A691EB92FE}.Debug|x64.Build.0 = Debug|x64
+		{923F5EE8-E007-454D-9DAA-D2A691EB92FE}.Debug|x86.ActiveCfg = Debug|Win32
+		{923F5EE8-E007-454D-9DAA-D2A691EB92FE}.Debug|x86.Build.0 = Debug|Win32
+		{923F5EE8-E007-454D-9DAA-D2A691EB92FE}.Release|x64.ActiveCfg = Release|x64
+		{923F5EE8-E007-454D-9DAA-D2A691EB92FE}.Release|x64.Build.0 = Release|x64
+		{923F5EE8-E007-454D-9DAA-D2A691EB92FE}.Release|x86.ActiveCfg = Release|Win32
+		{923F5EE8-E007-454D-9DAA-D2A691EB92FE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
