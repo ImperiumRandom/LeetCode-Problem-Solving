@@ -28,25 +28,37 @@ public:
 
             for (int c = 1; c <= 9; c++) {
 
-                if(board[rowStart][columnStart] > 0) {
+                if(std::isdigit(board[rowStart][columnStart])) {
+
+                    
 
                     numbersInSubBox ++;
+
+                    
 
                     subBoxNums[(board[rowStart][columnStart])] ++;
 
                 };
 
-                if(board[rowStart][columnStart + 1] > 0) {
+                if(std::isdigit(board[rowStart][columnStart + 1])) {
+
+                    
 
                     numbersInSubBox ++;
+
+                    
 
                     subBoxNums[(board[rowStart][columnStart + 1])] ++;
 
                 };
 
-                if(board[rowStart][columnStart + 2] > 0) {
+                if(std::isdigit(board[rowStart][columnStart + 2])) {
+
+                    
 
                     numbersInSubBox ++;
+
+                    
 
                     subBoxNums[(board[rowStart][columnStart + 2])] ++;
 
@@ -54,28 +66,44 @@ public:
 
                 rowStart++;
 
+                
+
                 // since we have now formed our subbox, checks if our hashed numbers are equal to the amount of numbers we found in the box. (if there are duplicates)
                 // then resets our row start, updates our column start as well
 
                 if (c == 3 || c == 6) {
 
+                    
+
                     if(subBoxNums.size() < numbersInSubBox) {
+
+                        
 
                         return false;
 
                     }
 
-                    numbersInSubBox = 0;
+                    else {
+                        
+                        numbersInSubBox = 0;
 
-                    columnStart += 3;
+                        columnStart += 3;
 
-                    rowStart = rowStart - 2;
+                        rowStart = rowStart - 3;
+
+                    }
 
                 }
 
             }
 
             rowStart += 3;
+
+            if (rowStart == 9) {
+            
+                break;
+            
+            }
 
         }
 
@@ -99,8 +127,8 @@ int main()
 
     char testTwo = '1';
 
-    std::vector<std::vector<char>> Debug{{'1', '3', '5','.','6', '9', '.','.', '.'},{'1', '3', '5','.','6', '9', '.','.', '.'},{'1', '3', '5','.','6', '9', '.','.', '.'},{'1', '3', '5','.','6', '9', '.','.', '.'},{'1', '3', '5','.','6', '9', '.','.', '.'},{'1', '3', '5','.','6', '9', '.','.', '.'},
-    {'1', '3', '5','.','6', '9', '.','.', '.'},{'1', '3', '5','.','6', '9', '.','.', '.'},{'1', '3', '5','.','6', '9', '.','.', '.'}};
+    std::vector<std::vector<char>> Debug{{'5', '3', '.','.','7', '.', '.','.', '.'},{'6', '.', '.','1','9', '5', '.','.', '.'},{'.', '9', '8','.','.', '.', '.','6', '.'},{'8', '.', '.','.','6', '.', '.','.', '3'},{'4', '.', '.','8','.', '3', '.','.', '1'},{'7', '.', '.','.','2', '.', '.','.', '6'},
+    {'.', '6', '.','.','.', '.', '2','8', '.'},{'.', '.', '.','4','1', '9', '.','.', '5'},{'.', '.', '.','.','8', '.', '.','7', '9'}};
 
     std::cout << test;
 
