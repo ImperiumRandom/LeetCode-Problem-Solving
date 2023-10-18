@@ -105,7 +105,7 @@ public:
 
 };
 
-// solution learned from neetcode, altered to use arrays instead
+// solution learned from neetcode, altered to use arrays instead from leetcode solution
 
 class Solution {
 
